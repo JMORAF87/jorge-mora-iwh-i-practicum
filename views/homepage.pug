@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title= title
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="/css/style.css")
+
+  body
+    h1 Service Requests
+
+    a(href="/update-cobj") Add to this table
+
+    table
+      thead
+        tr
+          th Name
+          th Service Type
+          th Status
+
+      tbody
+        each serviceRequest in serviceRequests
+          tr
+            td= serviceRequest.properties.name
+            td= serviceRequest.properties.service_type
+            td= serviceRequest.properties.status

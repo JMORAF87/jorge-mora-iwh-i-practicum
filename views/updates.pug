@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title= title
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="/css/style.css")
+
+  body
+    h1 Add Service Request
+
+    a(href="/") Return to the homepage
+
+    form(method="POST" action="/update-cobj")
+      label(for="name") Name
+      input(type="text" id="name" name="name" required)
+
+      label(for="service_type") Service Type
+      input(type="text" id="service_type" name="service_type" required)
+
+      label(for="status") Status
+      input(type="text" id="status" name="status" required)
+
+      button(type="submit") Add Service Request
